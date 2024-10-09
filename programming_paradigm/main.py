@@ -4,21 +4,22 @@ import sys
 from robust_division_calculator import safe_divide
 
 def main():
-    # Check if the correct number of arguments is provided (numerator and denominator)
+    # Check for exactly two command-line arguments (excluding the script name)
     if len(sys.argv) != 3:
         print("Usage: python main.py <numerator> <denominator>")
         sys.exit(1)
 
-    # Retrieve the numerator and denominator from command line arguments
+    # Extract the command-line arguments
     numerator = sys.argv[1]
     denominator = sys.argv[2]
 
-    # Call the safe_divide function and print the result
+    # Perform the division using the safe_divide function
     result = safe_divide(numerator, denominator)
-    print(result)
+    print(result, end="")  # Using end="" to avoid an extra newline character
 
 if __name__ == "__main__":
     main()
+
 # main.py
 
 from library_management import Book, Library
